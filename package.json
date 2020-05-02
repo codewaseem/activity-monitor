@@ -2,9 +2,9 @@
   "license": "MIT",
   "scripts": {
     "build": "tsc",
-    "ts-node:server": "node -r ts-node/register ./src/server/index.ts",
+    "ts-node:server": "node -r ts-node/register ./src/index.ts",
     "ts-node:in": "node -r ts-node/register",
-    "dev:server": "ts-node-dev --respawn ./src/server/index.ts",
+    "dev:server": "ts-node-dev --respawn ./src/index.ts",
     "start:inspect": "node --inspect=5858 -r ts-node/register ./src/index.ts",
     "dev": "yarn dev:server",
     "prettier-watch": "onchange '**/*.js' -- prettier --write {{changed}}",
@@ -45,6 +45,7 @@
     "typescript": "3.8.3"
   },
   "dependencies": {
+    "@senzil/desktop-screenshot": "https://github.com/senzil/node-desktop-screenshot.git",
     "@typegoose/typegoose": "^6.4.0",
     "apollo-server-express": "^2.11.0",
     "bcrypt": "^4.0.1",
